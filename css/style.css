@@ -1,4 +1,102 @@
-.align_right{
-    text-align:right;
-    margin-right: 0;
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+html, body {
+    margin: 0; /* Remove default margin from the body */
+    padding: 0; /* Remove default padding from the body */
+    height: 100%;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+a {
+    color: white; /* Set the color to white or any preferred color */
+    text-decoration: none; /* Removes the underline */
+    transition: color 0.3s; /* Smooth color change on hover */
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Stack navbar items vertically on smaller screens */
+    }
+
+    .intro_section {
+        padding: 20px; /* Add some padding for mobile */
+    }
+}
+
+/* Styling content inside the navigation bar*/
+.menu{
+    /*background: linear-gradient(90deg, #000000 0%, #4B0000 100%);*/
+    background: linear-gradient(90deg, #8B0000, #4B0000);
+    color: white;
+    display: flex; /* Use flexbox to align elements horizontally */
+    position: sticky;
+    /*justify-content: space-between;*/
+    top:0;
+    height: 50px;
+    padding: 20px 40px;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.left_section {
+    flex: 1; /* Pushes this section to the extreme left */
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-right: 20px; 
+}
+.left_section a:hover {
+    color: #ff6347; /* Lighter red on hover */
+}
+
+.center_section{
+    flex: 1; /* This will be centered */
+}
+.center_section a {
+    /* margin: 0 10px; /* Equal space between links */
+    font-size: 20px;
+    color: #f0f0f0;
+    text-decoration: none;
+    transition: color 0.3s;
+    padding : 10px;
+    line-height: 40px;
+}
+.center_section a:hover {
+    color: #ff6347; /* Lighter red on hover */
+    text-decoration: underline;
+}
+
+.right_section {
+    flex: 1; /* Pushes this section to the extreme right */
+    text-align: right; /* Align button to the right */
+}
+.left_section, .center_section, .right_section {
+    margin-top: 10px; /* Adjust this value as needed */
+}
+
+.Contact-button {
+    padding: 10px 25px; /* Spacing inside button */
+    background-color: #C32148;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+.Contact-button:hover {
+    background-color: white;
+    color: #C32148;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Styliing content for the home section */
+.intro_section {
+    height: calc(100vh - 75px);
+    background-image: url("home_back.jpeg"); /* Replace with the path to your image */
+    background-size: cover;
+    display:flex;
 }
